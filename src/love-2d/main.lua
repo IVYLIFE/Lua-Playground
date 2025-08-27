@@ -2,7 +2,7 @@
 
 -- Load the LÖVE2D module and utilities
 _G.LOVE = require("love")
-local UTILS = require("utils.utils")
+local UTILS = require("utils")
 
 
 print("LÖVE2D Game Initialized")

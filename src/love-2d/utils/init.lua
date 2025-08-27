@@ -1,7 +1,7 @@
 --[[
 ==============================================
 
-    * utils.lua
+    * init.lua
     * A comprehensive utility + documentation layer for LÖVE (Love2D) 11.x
     * Provides documented wrappers around common LÖVE modules:
 
@@ -31,7 +31,7 @@ To Use them in a LÖVE2D project,
 
 1.  If utils folder is not in the project root : 
     Update package.path to include utility scripts
-    * package.path = '{relative_path_to_utils}/?.lua;' .. package.path
+    * package.path = "../src/love-2d/?.lua;../src/love-2d/?/init.lua;" .. package.path
 
 2.  Require the utils module in your main.lua or any other file where you need it:
     local UTILS = require("utils")
@@ -50,16 +50,16 @@ To Use them in a LÖVE2D project,
 -- ==============================================
 
 local UTILS = {
-    AUDIO      =  require("audio"),
-    EVENTS     =  require("events"),
-    FILESYSTEM =  require("fileSystem"),
-    GRAPHICS   =  require("graphics"),
-    KEYBOARD   =  require("keyboard"),
-    MATHS      =  require("maths"),
-    MOUSE      =  require("mouse"),
-    QOL        =  require("qol"),
-    TIMER      =  require("timer"),
-    WINDOWS    =  require("windows"),
+    AUDIO      = require("utils.audio"),
+    EVENTS     = require("utils.events"),
+    FILESYSTEM = require("utils.fileSystem"),
+    GRAPHICS   = require("utils.graphics"),
+    KEYBOARD   = require("utils.keyboard"),
+    MATHS      = require("utils.maths"),
+    MOUSE      = require("utils.mouse"),
+    QOL        = require("utils.qol"),
+    TIMER      = require("utils.timer"),
+    WINDOWS    = require("utils.windows"),
 }
 
 return UTILS
